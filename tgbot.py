@@ -203,10 +203,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     else:
         await update.message.reply_text("Не понял 😅 Выбери кнопку из меню.")
-
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 # --- Основная функция ---
 def main():
-    app = ApplicationBuilder().token("BOT_TOKEN").build()
+    app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("sendall", sendall))
