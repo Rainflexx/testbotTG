@@ -206,7 +206,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # --- Основная функция ---
 def main():
-    app = ApplicationBuilder().token("8314097287:AAH6tXiyHYHjktN6C8nJN2xKpcboEW84twA").build()
+    app = ApplicationBuilder().token("BOT_TOKEN").build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("sendall", sendall))
